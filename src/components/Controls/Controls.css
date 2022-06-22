@@ -1,0 +1,115 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls.disabled .input,
+.controls.disabled button[type="submit"] {
+  opacity: 0.5;
+}
+input[type="color"] {
+  width: 60px;
+  height: 40px;
+}
+input[type="color"]#inset-color {
+  width: 40px;
+}
+.input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin: 0.5rem 0;
+}
+
+input[type="range"] {
+  flex: 1 1 0;
+}
+
+button[type="submit"] {
+  margin-top: auto;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  color: #eee;
+  background-color: var(--card-background);
+  padding: 1em;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button[type="submit"]:disabled {
+  filter: grayscale(1);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+button[type="submit"]:hover {
+  color: var(--card-background);
+  background-color: #eee;
+}
+
+.drag-area {
+  border: 2px dashed #fff;
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 2 1 auto;
+  gap: 1em;
+  padding: 2em;
+  margin: 1em 0 2em;
+}
+.drag-area.active {
+  border: 2px solid #fff;
+}
+.drag-area .icon {
+  font-size: 40px;
+  color: #fff;
+}
+.drag-area header {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area img {
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.drag-area img.uploadIcon {
+  max-width: 50px;
+}
+
+.gradients {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.gradient {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.2s;
+}
+.gradient:hover {
+  opacity: 0.5;
+}
+.gradient.selected {
+  border: 4px solid #eee;
+}
